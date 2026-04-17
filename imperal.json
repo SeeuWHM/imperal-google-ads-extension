@@ -1,0 +1,59 @@
+{
+  "app_id": "google-ads",
+  "version": "1.0.0",
+  "capabilities": [],
+  "tools": [
+    {
+      "name": "tool_gads_chat",
+      "description": "Google Ads — connect account, manage campaigns (Search/Shopping/Display/Video/PMax), ad groups, Responsive Search Ads, keywords, performance reports, keyword research, budget monitoring, AI performance analysis.",
+      "scopes": ["*"],
+      "parameters": {
+        "message": {"type": "string", "required": false},
+        "kwargs":  {"type": "string", "required": true}
+      }
+    },
+    {
+      "name": "skeleton_refresh_gads",
+      "description": "Background refresh: today's Google Ads metrics, campaign list, budget alerts.",
+      "scopes": [],
+      "parameters": {
+        "kwargs": {"type": "string", "required": true}
+      }
+    },
+    {
+      "name": "skeleton_alert_gads",
+      "description": "Proactive alert: notify user if any campaign budget is critically low (≥90% spent).",
+      "scopes": [],
+      "parameters": {
+        "kwargs": {"type": "string", "required": true}
+      }
+    },
+    {
+      "name": "__panel__account_dashboard",
+      "description": "Panel: Google Ads account overview with today's KPIs and campaigns list.",
+      "scopes": [],
+      "parameters": {
+        "params": {"type": "string", "required": true}
+      }
+    },
+    {
+      "name": "__panel__campaign_detail",
+      "description": "Panel: Campaign detail with ad groups, ads, keywords, and performance.",
+      "scopes": [],
+      "parameters": {
+        "params": {"type": "string", "required": true}
+      }
+    },
+    {
+      "name": "__panel__reports",
+      "description": "Panel: Performance reports, search terms analysis, and keyword research.",
+      "scopes": [],
+      "parameters": {
+        "params": {"type": "string", "required": true}
+      }
+    }
+  ],
+  "signals": [],
+  "schedules": [],
+  "required_scopes": ["*"]
+}
